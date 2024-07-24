@@ -29,11 +29,12 @@ type MergeWithHTMLProps<T extends As, P = {}> = Omit<ReactPropsOf<T>, keyof P> &
 type ReactChildren = React.ReactNode | React.ReactNode[] | undefined | null | string
 type ChildrenRender<P> = ArrowFunction<[P], ReactChildren>
 
-type Provider<P = {}> = (
-	props: P & {
+type Layout = React.FC<Readonly<ChildrenProp>>
+type Provider<P = {}> = React.FC<
+	P & {
 		children: ReactChildren
-	},
-) => React.ReactNode
+	}
+>
 
 type ChildrenProp = {
 	children: ReactChildren
@@ -49,6 +50,7 @@ export type {
 	As,
 	XOR,
 	XORs,
+	Layout,
 	ValueOf,
 	Without,
 	nullable,
