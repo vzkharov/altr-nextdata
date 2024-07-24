@@ -5,6 +5,8 @@ import { Inter } from 'next/font/google'
 
 import type { Layout } from '~/lib/types'
 
+import { Header } from '~/components/Header'
+
 import { Providers } from './providers'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -16,7 +18,10 @@ const RootLayout: Layout = ({ children }) => (
 		suppressContentEditableWarning
 	>
 		<body className={inter.className}>
-			<Providers>{children}</Providers>
+			<Providers>
+				<Header />
+				<main>{children}</main>
+			</Providers>
 		</body>
 	</html>
 )
