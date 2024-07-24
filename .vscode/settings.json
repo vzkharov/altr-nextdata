@@ -1,0 +1,43 @@
+{
+	"editor.formatOnSave": true,
+	"editor.formatOnPaste": true,
+	"editor.quickSuggestions": {
+		"strings": true
+	},
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+
+	"typescript.tsdk": "5.5.3",
+	"typescript.format.enable": true,
+	"typescript.suggest.paths": true,
+
+	"css.validate": true,
+	"files.associations": {
+		"*.css": "tailwindcss"
+	},
+
+	"tailwindCSS.hovers": true,
+	"tailwindCSS.validate": true,
+	"tailwindCSS.suggestions": true,
+	"tailwindCSS.colorDecorators": true,
+	"tailwindCSS.showPixelEquivalents": true,
+
+	"tailwindCSS.lint.invalidTailwindDirective": "error",
+	"tailwindCSS.lint.recommendedVariantOrder": "warning",
+	"tailwindCSS.classAttributes": ["class", "className", "ngClass", "classNames", "ClassName"],
+	"tailwindCSS.experimental.classRegex": [["tv\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]],
+
+	"json.schemas": [
+		{
+			"url": "https://cdn.jsdelivr.net/npm/tsup/schema.json",
+			"fileMatch": ["tsup.config.json"]
+		}
+	],
+	"files.exclude": {
+		"**/.git": true,
+		"**/.svn": true,
+		"**/.hg": true,
+		"**/CVS": true,
+		"**/.DS_Store": true,
+		"**/Thumbs.db": true
+	}
+}

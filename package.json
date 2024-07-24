@@ -1,0 +1,27 @@
+{
+	"name": "alterdepression",
+	"version": "1.0.0",
+	"license": "MIT",
+	"private": true,
+	"workspaces": [
+		"apps/*",
+		"packages/*"
+	],
+	"scripts": {
+		"build": "turbo run build",
+		"start": "turbo run start",
+		"dev": "turbo run dev",
+		"format": "prettier --write \"**/*.{ts,tsx,js,jsx,md,mdx,json}\"",
+		"test": "bun test src --coverage --timeout 5000",
+		"clean": "rm -rf .turbo node_modules && turbo run clean --parallel"
+	},
+	"devDependencies": {
+		"@morlay/bunpublish": "^0.3.0",
+		"prettier": "latest",
+		"turbo": "~2.0.6"
+	},
+	"engines": {
+		"node": ">=18"
+	},
+	"packageManager": "bun@1.1.7"
+}
