@@ -1,0 +1,70 @@
+{
+	"name": "@alterdepression/next-wrapper",
+	"license": "MIT",
+	"version": "1.0.0",
+	"author": "Vadzim Zakharov <zakharovvadzim@yandex.by>",
+	"description": "A utils wrapper for client & server components with data fetching...",
+	"main": "./lib/index.js",
+	"types": "./lib/index.d.ts",
+	"module": "./lib/index.mjs",
+	"publishConfig": {
+		"access": "public",
+		"registry": "https://registry.npmjs.org/"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/vzkharov/altr-rocket-sms.git"
+	},
+	"scripts": {
+		"build": "tsup",
+		"clean": "rm -rf node_modules lib",
+		"prepublishOnly": "bun run build"
+	},
+	"devDependencies": {
+		"@types/bun": "^1.1.1",
+		"@types/node": "^20.12.7",
+		"bun-plugin-dts": "^0.2.3",
+		"bun-types": "^1.1.7",
+		"tsup": "^8.0.2",
+		"typescript": "^5.4.5"
+	},
+	"engines": {
+		"node": ">=18"
+	},
+	"files": [
+		"lib/**"
+	],
+	"exports": {
+		".": {
+			"import": "./lib/index.mjs",
+			"require": "./lib/index.js"
+		}
+	},
+	"typesVersions": {
+		"*": {
+			".": [
+				"./lib/index.d.ts"
+			]
+		}
+	},
+	"keywords": [
+		"bun",
+		"node",
+		"next",
+		"nextjs",
+		"react-query",
+		"server actions"
+	],
+	"bugs": {
+		"url": "https://github.com/vzkharov/altr-next-wrapper/issues"
+	},
+	"homepage": "https://github.com/vzkharov/altr-next-wrapper#readme",
+	"directories": {
+		"lib": "lib"
+	},
+	"dependencies": {
+		"@tanstack/react-query": "^5.0.0-rc.16",
+		"@trpc/client": "^10.45.2",
+		"@trpc/server": "^10.45.2"
+	}
+}
