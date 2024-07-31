@@ -6,7 +6,7 @@
 	},
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 
-	"typescript.tsdk": "5.5.3",
+	"typescript.tsdk": "5.5.4",
 	"typescript.format.enable": true,
 	"typescript.suggest.paths": true,
 
