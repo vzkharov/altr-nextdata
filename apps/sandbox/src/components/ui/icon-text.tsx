@@ -11,14 +11,15 @@ type IconTextProps = MergeWithHTMLProps<
 	}
 >
 
-const IconText = forwardRef<HTMLDivElement, IconTextProps>(({ text, icon, className, ...props }) => (
+const IconText = forwardRef<HTMLDivElement, IconTextProps>(({ text, icon, className, ...props }, ref) => (
 	<div
 		{...props}
+		ref={ref}
 		className={cn('min-w-0 flex items-center gap-3', className)}
 	>
 		{icon}
 		<span
-			title={String(text)}
+			title={text}
 			className="flex-1 line-clamp-1"
 		>
 			{text}
