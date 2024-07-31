@@ -28,3 +28,4 @@ const ThemeProvider = ({
 
 export { Theme, ThemeProvider }
 export { useTheme } from 'next-themes'
+export type { ThemeProviderProps }
