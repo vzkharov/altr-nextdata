@@ -1,0 +1,84 @@
+{
+	"name": "@alterdepression/nextdata",
+	"license": "MIT",
+	"version": "1.0.0",
+	"author": "Vadzim Zakharov <zakharovvadzim@yandex.by>",
+	"description": "A utils wrapper for client & server components with data fetching...",
+	"publishConfig": {
+		"access": "public",
+		"registry": "https://registry.npmjs.org/"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/vzkharov/altr-rocket-sms.git"
+	},
+	"scripts": {
+		"build": "yarn tsup",
+		"clean": "rm -rf node_modules lib",
+		"prepublishOnly": "bun run build"
+	},
+	"peerDependencies": {
+		"next": ">=13",
+		"react": ">=18",
+		"react-dom": ">=18"
+	},
+	"devDependencies": {
+		"@types/bun": "^1.1.1",
+		"@types/node": "^20.12.7",
+		"@types/react": "^18.3.3",
+		"@types/react-dom": "^18.3.0",
+		"bun-plugin-dts": "^0.2.3",
+		"bun-types": "^1.1.7",
+		"tsup": "^8.0.2",
+		"typescript": "^5.5.4"
+	},
+	"engines": {
+		"node": ">=18"
+	},
+	"files": [
+		"lib/**"
+	],
+	"exports": {
+		"./client": {
+			"import": "./lib/client.mjs",
+			"types": "./lib/client.d.ts",
+			"require": "./lib/client.js"
+		},
+		"./server": {
+			"import": "./lib/server.mjs",
+			"types": "./lib/server.d.ts",
+			"require": "./lib/server.js"
+		}
+	},
+	"typesVersions": {
+		"*": {
+			"./client": [
+				"./lib/client.d.ts"
+			],
+			"./server": [
+				"./lib/server.d.ts"
+			]
+		}
+	},
+	"keywords": [
+		"bun",
+		"node",
+		"next",
+		"nextjs",
+		"nextdata",
+		"next data",
+		"react-query",
+		"server actions"
+	],
+	"bugs": {
+		"url": "https://github.com/vzkharov/altr-nextdata/issues"
+	},
+	"homepage": "https://github.com/vzkharov/altr-nextdata#readme",
+	"directories": {
+		"lib": "lib"
+	},
+	"dependencies": {
+		"@tanstack/react-query": "^5.0.0-rc.16",
+		"react-error-boundary": "^4.0.13"
+	}
+}
