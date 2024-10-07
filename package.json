@@ -16,7 +16,7 @@
 		"clean": "rm -rf .turbo node_modules && turbo run clean --parallel"
 	},
 	"devDependencies": {
-		"@morlay/bunpublish": "^0.3.0",
+		"@morlay/bunpublish": "^0.4.1",
 		"prettier": "latest",
 		"turbo": "~2.0.6"
 	},
