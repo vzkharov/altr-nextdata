@@ -2,13 +2,14 @@ import { defineConfig } from 'tsup'
 
 const buildConfig = defineConfig({
 	outDir: './lib',
-	platform: 'node',
+	platform: 'neutral',
+	target: ['es2020', 'node16'],
 	format: ['cjs', 'esm'],
-	entry: ['./src/client.tsx', './src/server.tsx'],
+	entry: ['./src/*.ts', './src/*.tsx'],
 	dts: true,
 	clean: true,
 	minify: true,
-	bundle: true,
+	bundle: false,
 	keepNames: true,
 	sourcemap: true,
 	minifyWhitespace: true,

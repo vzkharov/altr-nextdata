@@ -1,4 +1,4 @@
-import { UserList } from '~/modules/UserList/index.server'
+import { UserList } from '~/modules/UserList/index.client'
 
 const Home = () => <UserList />
 
