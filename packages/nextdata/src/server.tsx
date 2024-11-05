@@ -1,7 +1,7 @@
 import React, { Fragment, Suspense } from 'react'
-import { ErrorBoundary, type ErrorBoundaryPropsWithFallback } from 'react-error-boundary'
 
-import { isUndefined } from './utils/boolean'
+import { isUndefined } from './utils'
+import { ErrorBoundary, type ErrorBoundaryPropsWithFallback } from './error-boundary'
 import type { ComponentWithData, ComponentWithoutData, WithDataSharedOptions } from './types'
 
 type WithDataOptions<Props, TData> = WithDataSharedOptions<Props, TData> & {
@@ -45,7 +45,10 @@ const withRSC = <Props extends {}, TData = {}>(
 					onError={onError}
 					fallback={<ErrorComponent />}
 				>
-					<Suspense fallback={<LoadingComponent />}>
+					<Suspense
+						key={JSON.stringify(props)}
+						fallback={<LoadingComponent />}
+					>
 						{/** @ts-expect-error RSC */}
 						<ServerComponent />
 					</Suspense>

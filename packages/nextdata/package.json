@@ -18,6 +18,7 @@
 		"prepublishOnly": "bun run build"
 	},
 	"peerDependencies": {
+		"@tanstack/react-query": ">=4",
 		"next": ">=13",
 		"react": ">=18",
 		"react-dom": ">=18"
@@ -29,6 +30,7 @@
 		"@types/react-dom": "^18.3.0",
 		"bun-plugin-dts": "^0.2.3",
 		"bun-types": "^1.1.7",
+		"react-error-boundary": "^4.0.13",
 		"tsup": "^8.0.2",
 		"typescript": "^5.5.4"
 	},
@@ -76,9 +78,5 @@
 	"homepage": "https://github.com/vzkharov/altr-nextdata#readme",
 	"directories": {
 		"lib": "lib"
-	},
-	"dependencies": {
-		"@tanstack/react-query": "^5.0.0-rc.16",
-		"react-error-boundary": "^4.0.13"
 	}
 }

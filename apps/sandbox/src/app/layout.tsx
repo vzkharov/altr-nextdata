@@ -27,8 +27,8 @@ const RootLayout: Layout = ({ children }) => (
 )
 
 const metadata: Metadata = {
-	title: 'Sandbox — Next Wrapper',
-	description: '',
+	title: 'nextdata.',
+	description: 'The sandbox to show usage of nextdata package.',
 }
 
 export { metadata }

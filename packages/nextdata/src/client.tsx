@@ -1,7 +1,7 @@
 import React, { Fragment, useMemo } from 'react'
 import type { DefaultError, UseQueryResult } from '@tanstack/react-query'
 
-import { isUndefined } from './utils/boolean'
+import { isUndefined } from './utils'
 import type { ComponentWithData, ComponentWithoutData, WithDataSharedOptions } from './types'
 
 type WithQueryOptions<Props, TData, TError> = WithDataSharedOptions<Props, TData> & {
